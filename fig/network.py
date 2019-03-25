@@ -1,6 +1,4 @@
 import random
-
-# Third-party libraries
 import numpy as np
 
 class Network(object):
@@ -14,7 +12,7 @@ class Network(object):
                         for x, y in zip(sizes[:-1], sizes[1:])]
 
     def feedforward(self, a):
-        """Return the output of the network if ``a`` is input."""
+
         for b, w in zip(self.biases, self.weights):
             a = sigmoid(np.dot(w, a)+b)
         return a
